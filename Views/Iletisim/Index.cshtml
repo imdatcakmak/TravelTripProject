@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link href="~/web1/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/web1/css/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Personal Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!----webfonts---->
+    <link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
+    <!----//webfonts---->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+</head>
+
+<div class="contact-content">
+    <div class="container">
+        <div class="contact-info">
+            <h3 style="padding-left:40%">İLETİŞİM</h3>
+        </div>
+        <div class="contact-details">
+            @using (Html.BeginForm("Index","Iletisim",FormMethod.Post))
+            {
+
+               <input type="text" placeholder="Adınız" name="AdSoyad" required />
+                <input type="text" placeholder="Email" required name="Mail" />
+                <input type="text" placeholder="Konu" required name="Konu" />
+                <input type="text" placeholder="Mesajınız" required name="Mesaj" />
+
+                <input type="submit" value="GÖNDER" />
+            }
+        </div>
+        <div class="contact-details">
+            <div class="col-md-6 contact-map">
+                <h4>Buradayız </h4>
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=ankara&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.online-timer.net"></a><br>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>

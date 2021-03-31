@@ -1,0 +1,11 @@
+﻿@using TravelTripProject.Models.Sınıflar
+@model List<Yorumlar>
+<div class="comments">
+    <h3>Son Yorumlar</h3>
+    <ul>
+        @foreach (var x in Model)
+        {
+            <li>@x.KullaniciAdi on <a href="/Blog/BlogDetay/@x.Blogid">@x.Yorum</a></li>
+        }
+    </ul>
+</div>

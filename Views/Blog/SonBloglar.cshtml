@@ -1,0 +1,13 @@
+﻿@using TravelTripProject.Models.Sınıflar
+@model List<Blog>
+<div class="recent">
+    <h3>Son Bloglar</h3>
+    @foreach (var x in Model)
+    {
+        <ul>
+            <li><a href="/Blog/BlogDetay/@x.ID">@x.Baslik</a></li>
+
+        </ul>
+    }
+
+</div>
